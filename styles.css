@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.centrarVertical{
+    color: white;
+    text-align: center;
+}
+
+.centrarVertical h1{
+    margin-bottom: 20px;
+}
+
+.contenedor-filas{
+    margin-top: 100px;
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.contenedor-dos-columnas{
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    height: auto;
+    color:white;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.contenedor-dos-columnas2{
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    height: auto;
+    color:white;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.contenedor-dos-columnas h1{
+    margin-bottom: 10px;
+}
+
+.ia-eleccion{
+    max-width: 300px;
+    min-width: 30%;
+    height: auto;
+    text-align: center;
+}
+
+.humano-eleccion{
+    max-width: 300px;
+    min-width: 30%;
+    text-align: center;
+}
+
+.contenedor-3-columnas{
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.elecciones{
+    width: 200px;
+}
+
+label img:hover {
+    filter: grayscale(0.4);
+}
+
+button{
+    background-color: gold;
+    color:black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    width: 30%;
+    height: 50px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    filter: grayscale(1);
+}

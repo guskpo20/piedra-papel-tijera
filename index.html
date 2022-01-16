@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel o tijera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="centrarVertical">
+        <!--Contenedor de todo-->
+        <div class="contenedor-filas">
+            <h1 id="resultado"></h1>
+            <!--Campo de batalla-->
+            <hr>
+            <div class="contenedor-dos-columnas">
+                <div class="ia-eleccion">
+                    <h1>Rival</h1>
+                    <img class="elecciones" src="/images/pregunta.png" alt="piedra" id="eleccionMaquina">
+                </div>
+                <div class="humano-eleccion">
+                    <h1>Tu</h1>
+                    <img class="elecciones" src="/images/pregunta.png" alt="piedra" id="eleccionHumano">
+                </div>
+            </div>
+            <hr>
+            <h1>Elige uno:</h1>
+            <!--Botones donde elegir que elejimos-->
+            <div class="contenedor-3-columnas">
+                <div class="piedra">
+                    <input type="radio" name="elecciones" id="piedra" value="piedra" checked>
+                    <label for="piedra"><img class="elecciones" src="/images/piedra.png" alt="piedra"></label>
+                </div>
+                <div class="papel">
+                    <input type="radio" name="elecciones" id="papel" value="papel">
+                    <label for="papel"><img class="elecciones" src="/images/papel.png" alt="papel"></label>
+                </div>
+                <div class="tijera">
+                    <input type="radio" name="elecciones" id="tijera" value="tijera">
+                    <label for="tijera"><img class="elecciones" src="/images/tijera.png" alt="tijera"></label>
+                </div>
+            </div>
+            <!--Botones utilidad-->
+            <div class="contenedor-dos-columnas2">
+                <button id="siguiente">Siguiente</button>
+                <button id="aleatorio">Aleatorio</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
