@@ -1,7 +1,7 @@
-# ESPAÑOL 
+# Español
 
 El clasico piedra-papel-tijera contra la computadora. 
 
-# INGLES
+# Ingles
 
 The clasic rock-paper-scissors game against the computer.
