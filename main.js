@@ -18,11 +18,11 @@ let resultado = document.getElementById('resultado');
 function eleccionRandom(){
     eleccionHumano = Math.floor(Math.random() * (3 - 0)) + 0;
     if(eleccionHumano == 0){
-        imgHumano.src="/images/piedra.png";
+        imgHumano.src="https://piedra-papel-o-tijera.netlify.app/IMAGENES/piedra.png";
     }else if(eleccionHumano == 1){
-        imgHumano.src="/images/papel.png";
+        imgHumano.src="https://piedrapapelotijera.uy/wp-content/uploads/2018/03/papel-slide.png";
     }else{
-        imgHumano.src="/images/tijera.png";
+        imgHumano.src="https://piedrapapelotijera.uy/wp-content/uploads/2018/03/tijera-slide.png";
     }
     iaElige()
 }
@@ -34,15 +34,18 @@ function eleccion(){
             respuesta = element.value;
         }
     });
-    let src = `/images/${respuesta}.png`;
-    imgHumano.src= src;
+    let src = undefined;
     if(respuesta == "piedra"){
+        src = "https://piedra-papel-o-tijera.netlify.app/IMAGENES/piedra.png"
         eleccionHumano = 0;
     }else if(respuesta == "papel"){
+        src = "https://piedrapapelotijera.uy/wp-content/uploads/2018/03/papel-slide.png";
         eleccionHumano = 1;
     }else{
+        src="https://piedrapapelotijera.uy/wp-content/uploads/2018/03/tijera-slide.png";
         eleccionHumano = 2;
     }
+    imgHumano.src= src;
     console.log(eleccionHumano)
     iaElige()
 }
@@ -50,11 +53,11 @@ function eleccion(){
 function iaElige(){
     eleccionIa = Math.floor(Math.random() * (3 - 0)) + 0;
     if(eleccionIa == 0){
-        imgMaquina.src="/images/piedra.png";
+        imgMaquina.src="https://piedra-papel-o-tijera.netlify.app/IMAGENES/piedra.png";
     }else if(eleccionIa == 1){
-        imgMaquina.src="/images/papel.png";
+        imgMaquina.src="https://piedrapapelotijera.uy/wp-content/uploads/2018/03/papel-slide.png";
     }else{
-        imgMaquina.src="/images/tijera.png";
+        imgMaquina.src="https://piedrapapelotijera.uy/wp-content/uploads/2018/03/tijera-slide.png";
     }
     ganador()
 }
@@ -76,10 +79,15 @@ function ganador(){
         resultado.innerHTML = "Ganaste"
     }
 
+    btnSiguiente.disabled = true;
+    btnAleatorio.disabled = true;
+
     setTimeout(function(){
         resultado.innerHTML = ""
         imgMaquina.src="/images/pregunta.png"
         imgHumano.src="/images/pregunta.png";
+        btnSiguiente.disabled = false;
+        btnAleatorio.disabled = false;
     }, 2000);
 }
 
